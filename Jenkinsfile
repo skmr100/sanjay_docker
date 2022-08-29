@@ -10,7 +10,7 @@ pipeline {
             when {
                 branch 'master'
             }
-            sh "docker build -t skmr100/getting-started ."
+            sh("docker build -t skmr100/getting-started .")
 
             steps {
                 withDockerRegistry([url: "", credentialsId: "dockerbuildbot-index.docker.io"]) {
